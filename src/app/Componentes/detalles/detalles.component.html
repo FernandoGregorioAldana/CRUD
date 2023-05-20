@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pokémon Cards</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <img class="header-image" src="{{pokemonImg}}">
+        <h2 class="card-title">{{pokemon.name}}</h2>
+        <h3 class="card-subtitle">Nº {{pokemon.id}}</h3>
+      </div>
+      <img class="card-image" src="{{pokemonImg}}" alt="pokemon">
+      <div class="card-content">
+        <div class="chip-list">
+          <div class="chip">Type: {{pokemonType}}</div>
+          <div class="chip">Height: {{pokemon.height}}</div>
+          <div class="chip">Weight: {{pokemon.weight}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card form-container">
+      <form class="pokemon-form" [formGroup]="formulario" (ngSubmit)="savePokemon()">
+        <h2>¡Captura Pokémon!</h2>
+        <div class="input-container">
+          <label for="usuario">Nombre Pokémon</label>
+          <input type="text" placeholder="Nombre" formControlName="name" onkeydown="return /[a-z, ]/i.test(event.key)">
+          <label for="usuario">Tipo</label>
+          <input type="text" placeholder="Tipo" formControlName="type" onkeydown="return /[a-z, ]/i.test(event.key)">
+          <label for="usuario">Altura</label>
+          <input type="text" placeholder="Altura" formControlName="height">
+        </div>
+        <button type="submit">Agregar Pokémon</button>
+        <a routerLink="/lista"><button type="submit">Ir a la lista</button></a>
+        <a routerLink="/inicio"><button class="extra-button">Regresar</button></a>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+

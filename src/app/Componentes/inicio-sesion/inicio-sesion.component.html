@@ -1,0 +1,60 @@
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!doctype html>
+
+<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title> Inicio De Sesión </title>    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="./inicio-sesion.component.css"
+      />
+      <script src="main.js"></script>
+        
+
+    </head>
+    
+    <body>
+    
+        <div id="contenedor">
+            
+            <div id="contenedorcentrado">
+                <div id="login">
+                    <form id="loginform" [formGroup]="formlog" (ngSubmit)="onbutton()">
+                        <label for="usuario">Usuario</label>
+                        <input id="usuario" type="text" name="usuario" placeholder="Usuario" required formControlName="email">
+                        
+                        <label for="password">Contraseña</label>
+                        <input id="password" type="password" placeholder="Contraseña" name="password" required formControlName="password">
+                        
+                    <div class="buttons">
+                        <button class="up" type="submit" title="Ingresar" name="Ingresar">Iniciar Sesión</button>
+                    </div>
+                    </form>
+                    
+                </div>
+                <div id="derecho">
+                    <div class="titulo">
+                        Bienvenido
+                    </div>
+                    <hr>
+                    <div class="pie-form">
+                        <a href="/registro">¿No tienes Cuenta? Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

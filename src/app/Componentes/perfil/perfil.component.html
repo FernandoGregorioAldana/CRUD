@@ -1,0 +1,56 @@
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!doctype html>
+
+<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title> Perfil </title>    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="./perfil.component.css"
+      />
+      <script src="main.js"></script>
+        
+
+    </head>
+    
+    <body>
+    
+        <div id="contenedor">
+            
+                <div id="login">
+                    <form id="loginform" [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+                        <label for="usuario">Nombre</label>
+                        <input formControlName="nombre" onkeydown="return /[a-z, ]/i.test(event.key)" id="usuario" type="text" name="usuario" placeholder="Usuario" required>
+
+                        <label for="usuario">Apellidos</label>
+                        <input formControlName="apellido" onkeydown="return /[a-z, ]/i.test(event.key)" id="usuario" type="text" name="apellidos" placeholder="Apellidos" required>
+
+                        <label for="usuario">Correo</label>
+                        <input formControlName="email" id="usuario" type="text" name="usuario" placeholder="Correo" required>
+                        
+                    <div class="buttons">
+                        <button class="up" type="submit" title="Ingresar" name="Ingresar">Actualizar Datos</button>
+                    </div>
+                    <div class="buttons">
+                        <a routerLink="/inicio"><button class="up" type="submit" title="Ingresar" name="Ingresar">Regresar al Inicio</button></a>
+                    </div>
+                    </form>
+                    
+                </div>
+
+                </div>
+        
+    </body>
+</html>

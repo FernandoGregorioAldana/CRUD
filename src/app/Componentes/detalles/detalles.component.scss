@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    position: relative;
+  }
+
+  .header-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .card-subtitle {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #ffcc00;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #ffcc00;
+    color: #ffffff;
+    border-radius: 4px;
+  }
+
+  /* Estilos específicos para el formulario */
+  .form-container {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .pokemon-form {
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+
+  .input-container {
+    margin-bottom: 10px;
+  }
+
+  .input-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .input-container input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .pokemon-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffcc00;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .pokemon-form button:hover {
+    transform: rotate(360deg);
+  }
+
+  .pokemon-form .extra-button {
+    background-color: #ffcc00;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  .pokemon-form .extra-button:hover {
+    transform: rotate(360deg);
+  }

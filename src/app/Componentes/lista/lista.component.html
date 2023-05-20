@@ -1,0 +1,12 @@
+
+  <div class="pokemon-card-list">
+    <div class="pokemon-card" *ngFor="let Pokemon of Pokemon">
+      <div class="pokemon-card-content">
+        <h3 class="pokemon-card-title">{{ Pokemon.name }}</h3>
+        <p class="pokemon-card-description">{{ Pokemon.type }}</p>
+        <p class="pokemon-card-description">{{ Pokemon.height }}</p>
+        <button class="btn btn-outline-danger" (click)="onClickDelete(Pokemon)">Borrar</button>
+      </div>
+    </div>
+  </div>
+  
